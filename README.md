@@ -10,6 +10,8 @@ npm i express
 
 npm i ws
 
+npm i multer
+
 npm i body-parser
 ```
 
