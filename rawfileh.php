@@ -23,6 +23,7 @@ $MadelineProto->loop(function()use($from,$file,$get,$params,$body,$MadelineProto
                         include "Password.php";
                         $output_file_name = yield $MadelineProto->downloadToDir($messages_Messages["messages"][0]["media"], '/tmp/uploads/');
                         $decrypted = SaferCrypto::decryptFile($output_file_name, $body["password"]??($get["password"]??"_"),$output_file_name.".dec");
+                        @unlink($output_file_name);
                         $from->send(json_encode(["opt"=>1,"header"=>['Content-Type',$e['mine']??"text/plain"]]));
                         $from->send(json_encode(["opt"=>1,"header"=>['Content-Length',filesize($output_file_name.".dec")]]));
 
