@@ -14,10 +14,14 @@ $MadelineProto->loop(function()use($from,$file,$get,$params,$body,$isbot,$Madeli
                         $info = yield $MadelineProto->get_download_info($messages_Messages["messages"][0]["media"]);
                         if(!$isbot) {
                             
-                        
+                            if (substr($info['mime'], 0, 12) === 'application/')
+                                $type = "attachment"; // file non mostrabile nel browser
+                            else
+                                $type = "inline"; // file mostrabile nel browser
+                            
                             $from->send(json_encode(["opt"=>1,"header"=>['Content-Length',$info['size']]]));
                             $from->send(json_encode(["opt"=>1,"header"=>['Content-Type',$info['mime']]]));;
-
+                            $from->send(json_encode(['opt' => 1, 'header' => ['Content-Disposition', $type.'; filename="'.$e['filename'].'"']]));
                             $output_file_name = yield $MadelineProto->downloadToDir($messages_Messages["messages"][0]["media"], '/tmp/uploads/');
                             $from->send(json_encode(["opt"=>3,"where"=>$output_file_name]));
                         } else {
