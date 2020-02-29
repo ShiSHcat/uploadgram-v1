@@ -1,4 +1,5 @@
 <?php
+//pony
 $MadelineProto->loop(function()use($from,$file,$get,$body,$MadelineProto){
 include "tokenH.php";
     $rsss = true;
@@ -96,6 +97,12 @@ include "tokenH.php";
             $from->send(json_encode(["opt"=>2,"message"=>"https://uploadgram.me/f/".$randomString.$qre]));
         }else {
             $from->send(json_encode(["opt"=>1,"header"=>["Content-Type","application/json"]]));
+            if($get["owocen"]??false) {
+                
+                $from->send(json_encode(["opt"=>2,"message"=>json_encode(["ok"=>true,"link"=>"https://owoce.noxyntious.tk/f/".$randomString.$qre,"deleteID"=>"https://uploadgram.me/api/delete/".$DeleteID1])]));
+            } elseif($get["webudu"]??false) {
+                $from->send(json_encode(["opt"=>2,"message"=>json_encode(["ok"=>true,"link"=>"https://upload.webud.xyz/f/".$randomString.$qre,"deleteID"=>"https://uploadgram.me/api/delete/".$DeleteID1])]));
+            } else {
                 $from->send(json_encode(["opt"=>2,"message"=>json_encode(["ok"=>true,"link"=>"https://uploadgram.me/f/".$randomString.$qre,"deleteID"=>"https://uploadgram.me/api/delete/".$DeleteID1])]));
             }
 
