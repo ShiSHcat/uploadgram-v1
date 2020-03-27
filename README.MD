@@ -1,3 +1,4 @@
+# [⚠️ NEW FASTER VERSION BY PATO05!](https://uploadgram.me)
 # uploadgram-v1
 
 Collaborators : [@danog](https://github.com/danog) [@Pato05](https://github.com/Pato05) [@Ergastolator1](https://github.com/Ergastolator1) [@TheLifeGamingYT](https://github.com/TheLifeGamingYT) [@shishcat8214](https://github.com/ShiSHcat)
