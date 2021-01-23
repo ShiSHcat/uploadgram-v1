@@ -1,20 +1,4 @@
 # [⚠️ NEW FASTER VERSION BY PATO05!](https://uploadgram.me)
 # uploadgram-v1
-
-Collaborators : [@danog](https://github.com/danog) [@Pato05](https://github.com/Pato05) [@Ergastolator1](https://github.com/Ergastolator1) [@TheLifeGamingYT](https://github.com/TheLifeGamingYT) [@shishcat8214](https://github.com/ShiSHcat)
-
-run 
-```
-composer req ratchet
-
-npm i express
-
-npm i ws
-
-npm i multer
-
-npm i body-parser
-```
-
-run both ss.js and wsa.php
-
+This project is dead, probably broken and the code of it makes me want to puke.
+Check out [the new Uploadgram, rewritten by Pato05](https://uploadgram.me) or [ShiSHTransfer (no hosted website just sources)](https://github.com/ShiSHcat/ShiSHTransfer)
